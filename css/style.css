@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.tabs {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.tablink {
+    background-color: #333;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tablink:hover, .tablink.active {
+    background-color: #555;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    animation: fadeEffect 1s;
+    background-color: white;
+}
+
+.app-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.update-homeboard {
+    border: 2px solid #ddd;
+    background-color: #fafafa;
+    padding: 15px;
+    padding-left: 40px; /* 左のpaddingを追加 */
+    padding-right: 40px; /* 右のpaddingを追加 */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.update-downloadboard {
+    border: 2px solid #ddd;
+    background-color: #fafafa;
+    padding: 15px;
+    padding-left: 30px; /* 左のpaddingを追加 */
+    padding-right: 30px; /* 右のpaddingを追加 */
+    margin-top: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.update-item {
+    margin-bottom: 20px;
+}
+
+/* 日付の右側に空白を追加 */
+.update-item b {
+    margin-right: 1em; /* エムスペース分のマージンを追加 */
+}
+
+@media screen and (max-width: 600px) {
+    .tablink, .tabcontent, .update-board {
+        float: none;
+        width: 100%;
+    }
+
+    .tablink {
+        text-align: center;
+    }
+
+    .update-board {
+        max-width: 100%; /* スマートフォンでは幅を100%に */
+    }
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+h2, h3 {
+    color: #333;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li::before {
+    content: "• ";
+    color: #333;
+    font-weight: bold;
+}
